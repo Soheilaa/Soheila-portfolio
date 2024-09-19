@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/App.css or src/components/LandingPage.css */
+html {
+  scroll-behavior: smooth;
+  background-color: #F0F0F0;
+}

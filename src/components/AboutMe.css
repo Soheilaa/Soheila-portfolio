@@ -1,0 +1,228 @@
+/* General styling for the About Me section */
+.about-me-section {
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black text */
+    width: 100%; /* Full width */
+    padding: 50px 5%; /* Consistent padding */
+    text-align: left;
+    box-sizing: border-box; /* Padding doesn't affect width */
+}
+
+/* "01" and "About Me." overlapping styling */
+.about-me-header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.about-me-number {
+    font-size: 10rem; /* Large size for "01" */
+    color: #E5E5E5; /* Light grey color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+    width: 100%;
+}
+
+.about-me-title {
+    font-size: 3rem; /* Size for "About Me." */
+    color: #000000; /* Black color */
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    top: 78px; /* Adjust to overlap with "01" */
+    width: 100%;
+}
+
+/* About Me description */
+.about-me-description {
+    margin-top: 166px; /* Space between title and description */
+    font-size: 1.2rem;
+    width: 100%; /* Full width */
+    max-width: 100%; /* Remove fixed max-width */
+}
+
+/* Row for experience, certifications, and skills */
+.about-me-details {
+    margin-top: 50px;
+    width: 100%; /* Full width */
+}
+
+/* Column container styling */
+.about-me-columns {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items to the start */
+    gap: 20px; /* Space between columns */
+}
+
+/* Columns */
+.column {
+    flex: 1; /* Columns take equal space */
+    text-align: center; /* Center text */
+}
+
+.column h3 {
+    font-size: 1.5rem;
+    color: #BF4042; /* Red color */
+    margin-bottom: 10px;
+}
+
+/* List styling */
+.experience-list, .certifications-list {
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0; /* Remove default left padding */
+    margin-left: 0; /* Remove left margin */
+}
+
+/* Skills List Styling */
+.skills-list {
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0; /* Remove default left padding */
+    margin-left: 0; /* Remove left margin */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Two columns with a minimum size */
+    gap: 10px; /* Space between items */
+}
+
+.skills-list li {
+    font-size: 1rem; /* Adjust font size as necessary */
+    margin-bottom: 10px; /* Add some spacing between list items */
+}
+
+.selected-works-header {
+    position: relative;
+    margin-bottom: 40px; /* Adjust as needed */
+    padding: 1rem;
+}
+
+.selected-works-number {
+    font-size: 10rem; /* Large size for "02" */
+    color: #E5E5E5; /* Light grey color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+    width: 100%;
+}
+
+.selected-works-title {
+    font-size: 3rem; /* Size for "Selected Works." */
+    color: #000000; /* Black color */
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    top: 78px; /* Adjust to overlap with "02" */
+    width: 100%;
+}
+
+/* Responsive Design: Large Desktop */
+@media screen and (min-width: 1200px) {
+    .about-me-header {
+        margin-bottom: 60px;
+    }
+
+    .about-me-number {
+        font-size: 14rem; /* Increase size for large screens */
+    }
+
+    .about-me-title {
+        font-size: 4rem; /* Increase title size */
+        top: 120px; /* Adjust overlap */
+    }
+
+    .about-me-description {
+        margin-top: 200px;
+        font-size: 1.4rem; /* Slightly increase text size */
+    }
+
+    .about-me-columns {
+        gap: 60px; /* Increase space between columns */
+    }
+
+    .column h3 {
+        font-size: 1.8rem; /* Larger font for section titles */
+    }
+
+    .column p {
+        font-size: 1.2rem; /* Larger paragraph font */
+    }
+}
+
+/* Mobile Design Adjustments */
+@media screen and (max-width: 768px) {
+    /* Center experience, certifications, and skills columns */
+    .about-me-details {
+        display: flex;
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align sections */
+        gap: 20px; /* Space between sections */
+        margin-top: 30px; /* Adjust top margin if needed */
+    }
+
+    .about-me-columns {
+        display: flex;
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align columns */
+        gap: 20px; /* Space between columns */
+        width: 100%; /* Ensure columns take full width */
+        padding: 0 20px; /* Add padding to prevent overflow */
+    }
+
+    .column {
+        text-align: center; /* Center text in columns */
+        width: 100%; /* Ensure column width is 100% */
+    }
+
+    .experience-list, .certifications-list {
+        list-style-type: none; /* Remove bullets */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        text-align: center; /* Center-align text in lists */
+    }
+
+    .skills-list {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Two columns with minimum width */
+        gap: 10px; /* Space between items */
+        width: 100%; /* Full width */
+        max-width: 600px; /* Limit max width to prevent overflow */
+        margin: 0 auto; /* Center the grid container */
+        padding: 0; /* Remove padding */
+    }
+
+    .skills-list li {
+        font-size: 1rem; /* Adjust font size if needed */
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    .vertical-line {
+        display: none; /* Hide vertical line for mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-me-number {
+        font-size: 5rem; /* Smaller font size for mobile */
+    }
+
+    .about-me-title {
+        font-size: 2rem;
+        top: 40px; /* Adjust overlap for mobile */
+    }
+
+    .about-me-description {
+        margin-top: 100px;
+        font-size: 1rem; /* Adjust text size */
+    }
+
+    .about-me-columns {
+        padding: 0; /* Remove padding */
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}

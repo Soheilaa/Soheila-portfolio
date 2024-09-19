@@ -1,0 +1,199 @@
+/* Main container for the Get In Touch section */
+.getInTouch-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    background-color: #181818;
+    color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header containing the large number and title */
+.getInTouch-header {
+    position: absolute;
+    top: 2px;
+    left: 2rem;
+    z-index: 1;
+    padding: 1rem;
+}
+
+/* Large number "03" styling */
+.getInTouch-number {
+    font-size: 10rem;
+    color: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Title "Get In Touch." styling */
+.getInTouch-title {
+    font-size: 3rem;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+}
+
+/* Content wrapper for paragraph and social icons */
+.getInTouch-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 100px; /* Adjust margin to place below the header */
+    width: 80%; /* Reduce the width for centering */
+}
+
+/* Text paragraph */
+.getInTouch-text {
+    font-size: 2rem;
+    color: #9b9b9b;
+    text-align: center; /* Center the text within its column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Social icons section */
+.getInTouch-social-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for icons */
+    grid-gap: 20px; /* Space between icons */
+    justify-content: center; /* Center icons in the right column */
+}
+
+/* Individual social icon containers */
+.social-icon {
+    background-color: #252525;
+    padding: 10px; /* Reduce padding to make circles smaller */
+    border-radius: 50%; /* Ensure the circles remain round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 60px;  /* Set a fixed width */
+    height: 60px; /* Set a fixed height */
+}
+
+/* Icon styling */
+.social-icon a {
+    color: #9b9b9b;
+    font-size: 1.5rem; /* Reduce the icon size */
+    text-decoration: none;
+}
+
+/* Hover effects for the icons */
+.social-icon:hover {
+    background-color: #3b3b3b;
+    transform: scale(1.1);
+}
+
+.social-icon a:hover {
+    color: #ffffff;
+}
+
+
+/* Responsive Adjustments for Tablets */
+@media screen and (max-width: 768px) {
+    .getInTouch-number {
+        font-size: 8rem;
+    }
+
+    .getInTouch-title {
+        font-size: 2.5rem;
+    }
+
+    .getInTouch-content {
+        grid-template-columns: 1fr; /* Stack the content in one column */
+    }
+
+    .getInTouch-social-icons {
+        grid-template-columns: 1fr 1fr; /* Keep 2-column layout for icons */
+    }
+}
+
+/* Mobile Design Adjustments */
+@media screen and (max-width: 480px) {
+    .getInTouch-container {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 1rem; /* Reduce padding for mobile */
+    }
+
+    .getInTouch-header {
+        position: relative; /* Remove absolute positioning */
+        margin-bottom: 1rem; /* Space below the header */
+        text-align: center; /* Center text */
+        width: 100%; /* Full width */
+    }
+
+    .getInTouch-number {
+        font-size: 5rem; /* Smaller font size for mobile */
+        margin: 0; /* Remove margin */
+        display: block; /* Ensure it's a block element for center alignment */
+        color: rgba(255, 255, 255, 0.15); /* Light color for the number */
+    }
+
+    .getInTouch-title {
+        font-size: 2rem; /* Smaller font size for mobile */
+        margin-top: 0.5rem; /* Adjust margin top */
+        color: #ffffff; /* White color for the title */
+    }
+
+    .getInTouch-content {
+        grid-template-columns: 1fr; /* Stack content in a single column */
+        margin-top: 1rem; /* Adjust top margin for mobile */
+        width: 100%; /* Full width for content */
+        text-align: center; /* Center align the content */
+    }
+
+    .getInTouch-text {
+        font-size: 1.2rem; /* Adjust text size for mobile */
+        margin-bottom: 1rem; /* Space below the text */
+    }
+
+    .getInTouch-social-icons {
+        display: flex; /* Use flexbox for centering */
+        flex-wrap: wrap; /* Allow icons to wrap to the next line if necessary */
+        justify-content: center; /* Center icons horizontally */
+        gap: 10px; /* Space between icons */
+        margin-top: 1rem; /* Space above the icons */
+        padding: 0; /* Remove padding */
+        width: 100%; /* Full width */
+    }
+
+    .social-icon {
+        width: 50px; /* Smaller width */
+        height: 50px; /* Smaller height */
+        padding: 10px; /* Adjust padding */
+        background-color: #252525; /* Background color for icons */
+        border-radius: 50%; /* Ensure round shape */
+        display: flex; /* Flexbox for centering icon */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .social-icon a {
+        color: #9b9b9b; /* Icon color */
+        font-size: 1.5rem; /* Adjust icon size */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .social-icon:hover {
+        background-color: #3b3b3b; /* Darker background on hover */
+        transform: scale(1.1); /* Slightly enlarge icon on hover */
+    }
+
+    .social-icon a:hover {
+        color: #ffffff; /* Icon color on hover */
+    }
+}

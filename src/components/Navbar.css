@@ -1,0 +1,100 @@
+/* src/components/Navbar.css */
+
+/* Base Navbar Styles */
+.navbar {
+    height: 50px; /* Smaller height for the navbar */
+    display: flex;
+    align-items: center;
+    background-color: #B7B7B7; /* Adjust background color as needed */
+    position: fixed; /* Keep navbar fixed at the top */
+    top: 20px; /* Space from the top of the page */
+    left: 0; /* Align the left side to the edge */
+    right: 0; /* Extend to the right edge of the viewport */
+    margin-left: 100px; /* Space from the left side of the page */
+    padding-left: 0; /* Remove padding from the left */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+}
+
+.navbar-logo img {
+    height: 50px; /* Adjust logo height as needed */
+    display: flex;
+}
+
+/* Navbar Links Styling */
+.navbar-links {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Align links horizontally */
+    gap: 20px; /* Space between links */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    flex-grow: 1; /* Allow links to grow and take available space */
+    justify-content: flex-end; /* Align links to the right */
+}
+
+.navbar-links li {
+    margin: 0; /* Remove default margin */
+}
+
+/* Add margin to the right of the last link */
+.navbar-links li:last-child {
+    margin-right: 60px; /* Add space between the last link and the right edge */
+}
+
+.navbar-links a {
+    color: #5A5A5A; /* Default color for the links */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust font size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar-links a:hover {
+    color: #ffffff; /* Color on hover */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: stretch; /* Stretch items to fill the full width */
+        width: 100%; /* Full width of the viewport */
+        margin: 0; /* Remove any margin */
+        padding: 0; /* Remove any padding */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+        background-color: #B7B7B7; /* Background color */
+    }
+
+    .navbar-logo {
+        align-self: flex-start; /* Align logo to the left */
+        margin-bottom: 10px; /* Space below the logo */
+    }
+
+    .navbar-links {
+        display: flex; /* Use flexbox for the links container */
+        flex-direction: row; /* Align links in a row */
+        justify-content: center; /* Center align links */
+        align-items: center; /* Vertically center items if needed */
+        width: 100%; /* Full width for links container */
+        padding: 0; /* Remove padding */
+        margin: 3rem; /* Remove margin */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+        margin-top: -3.5rem;
+    }
+
+    .navbar-links li {
+        margin: 0 10px; /* Adjust space between links */
+    }
+
+    .navbar-links a {
+        font-size: 15px; /* Adjust font size for mobile */
+    }
+    .getInTouch-header {
+        display: none;
+    }
+}

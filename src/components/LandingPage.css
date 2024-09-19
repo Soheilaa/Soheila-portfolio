@@ -1,0 +1,277 @@
+/* General layout for the landing page */
+.landing-content {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    justify-content: space-between;
+    align-items: stretch; /* Stretch the content to fill the height */
+    flex-direction: row;
+}
+
+/* Styling for the left-side content */
+.left-side {
+    width: 50%; /* Left side takes 50% of the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align content to the left */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Heading ("HELLO") styling */
+.left-side h1 {
+    font-size: 2.5rem; /* Responsive font size */
+    font-weight: 200;
+    letter-spacing: 0.5rem; /* Adjust letter spacing */
+    color: #C92B1D; /* Color for HELLO */
+    margin: 0; /* No margin around the heading */
+    line-height: 1; /* Tighten line spacing */
+}
+
+/* Paragraph ("I’m Soheila Golestani...") styling */
+.left-side p {
+    margin-top: 10px; /* Small gap between heading and paragraph */
+    font-size: 2rem; /* Responsive font size */
+    margin-bottom: 40px; /* Space below the paragraph */
+    font-family: 'Kaisei Tokumin', serif; /* Custom font */
+}
+
+/* Button container on the left side */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    position: absolute;
+    bottom: 20px; /* Align the buttons to the bottom */
+    /* left: 20px; */
+}
+
+/* Styling for the right-side content */
+.right-side {
+    width: 50%; /* Right side takes 50% of the page */
+    position: relative; /* For button positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; /* Center the icons horizontally */
+}
+
+/* Image styling on the right side */
+.right-side img {
+    width: 100%;
+    height: 100vh; /* Full height of viewport */
+    object-fit: cover; /* Keep image aspect ratio and cover the area */
+}
+
+/* Right button styling (opacity for background but not the text) */
+#right-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(59, 59, 59, 0.5); 
+    color: #ffffff; 
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1rem; /* Responsive font size */
+    cursor: pointer;
+}
+
+/* Add a horizontal line to the left of the button */
+#right-button::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Align the line vertically in the middle of the button */
+    left: -6rem; /* Adjust this to move the line to the left */
+    transform: translateY(-50%); /* Ensure vertical alignment */
+    width: 6rem; /* Length of the line */
+    height: 1px; /* Thickness of the line */
+    background-color: #ffffff; /* Color of the line */
+}
+
+/* Common button styling */
+.btn {
+    width: 192px;
+    height: 30px;
+    padding: 10px 20px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1rem; /* Responsive font size */
+    cursor: pointer;
+    background-color: #000000; /* Solid black for normal buttons */
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: #555; /* Slightly lighter hover effect */
+}
+/* Social icons container */
+.social-icons {
+    position: fixed; /* Stick to the viewport */
+    bottom: 20px; /* Keep icons at the bottom of the page */
+    right: 20px; /* Stick to the right of the page */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center the icons horizontally within their container */
+}
+
+/* Individual icon styling */
+.icon {
+    font-size: 1.5rem; /* Icon size */
+    color: #ffffff; /* Icon color */
+    margin-bottom: 34px; /* Increased space between icons */
+    cursor: pointer;
+}
+
+/* Styling for the arrow down button */
+.arrow-down {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the arrow icon */
+    width: 60px; /* Circle size */
+    height: 60px;
+    border-radius: 50%; /* Make the arrow button circular */
+    border: 2px solid #ffffff; /* Circle border color */
+    cursor: pointer;
+    margin-top: 20px; /* Space above the arrow button */
+    position: relative;
+}
+
+/* Adjust the icon inside the arrow-down button */
+.arrow-down .icon {
+    font-size: 1.5rem; /* Adjusted size of the arrow icon */
+    color: #ffffff; /* Color of the arrow icon */
+    margin: 0; /* Ensure no extra margin affects the centering */
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    width: 60%; /* Ensure the icon takes full width */
+    height: 60%; /* Ensure the icon takes full height */
+    font-weight: 400; /* Lighter font weight (regular) */
+}
+
+
+/* Line after Instagram icon and before arrow down */
+.arrow-down::before {
+    content: "";
+    position: absolute;
+    top: -53px; /* Increase the gap between the line and the arrow */
+    width: 1px; /* Line width */
+    height: 40px; /* Line height */
+    background-color: #ffffff; /* Line color */
+    left: 50%;
+    transform: translateX(-50%); /* Ensure the line is centered horizontally */
+}
+
+
+/* Ensure all icons and arrow-down are centered properly */
+.social-icons .icon, .arrow-down .icon {
+    display: block;
+    text-align: center; /* Ensure icons are centered in their containers */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    /* Stack content vertically */
+    .landing-content {
+        flex-direction: column;
+        height: auto; /* Allow scrolling for smaller screens */
+        padding-top: 80px; /* Add space to avoid overlapping with navbar */
+        align-items: center; /* Center content on the page */
+    }
+
+    /* Full width for both left-side and right-side sections */
+    .left-side, .right-side {
+        width: 100%; /* Full width for mobile */
+        padding: 20px; /* Consistent padding */
+        text-align: center; /* Center the text and elements */
+    }
+
+    /* HELLO text styling for mobile */
+    .left-side h1 {
+        font-size: 2.2rem; /* Slightly larger for emphasis */
+        letter-spacing: 0.3rem; /* A bit more letter spacing */
+        font-weight: bold; /* Make the heading stand out */
+        margin-bottom: 15px; /* Space below heading */
+    }
+
+    /* Paragraph text styling */
+    .left-side p {
+        font-size: 1.4rem; /* Adjusted for readability */
+        margin-bottom: 20px; /* Create space below the paragraph */
+        line-height: 1.5; /* Improve text readability */
+    }
+
+    /* Full width image on mobile */
+    .right-side img {
+        width: 100%; /* Image takes up full width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area well */
+        margin-bottom: 20px; /* Space below the image */
+    }
+
+    /* Buttons are stacked vertically under the image */
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons */
+        width: 100%; /* Full width for buttons */
+        gap: 15px; /* Spacing between buttons */
+    }
+
+    /* Full width buttons with padding for touch interaction */
+    .btn {
+        width: 100%; /* Full width for mobile */
+        padding: 14px; /* Increase padding for better touch area */
+        font-size: 1.2rem; /* Increase button text size */
+        border-radius: 5px; /* Slight rounding for better design */
+    }
+
+    /* Adjust the CV button specifically */
+    #right-button {
+        width: 100%; /* Full width */
+        padding: 16px; /* Increase padding for better touch area */
+        background-color: rgba(59, 59, 59, 0.7); /* Slightly transparent background */
+        color: #ffffff; /* Text color */
+        border: none; /* Clean look */
+        font-size: 1.2rem; /* Slightly larger font for visibility */
+        border-radius: 5px; /* Rounded corners */
+    }
+
+    /* Social icons arranged in a row and spaced evenly */
+    .social-icons {
+        margin-top: 20px; /* Space above social icons */
+        display: flex;
+        justify-content: center; /* Center the icons */
+        gap: 20px; /* Spacing between icons */
+    }
+
+    /* Adjust icon sizes for mobile */
+    .icon {
+        font-size: 1.6rem; /* Slightly larger icons for touch interaction */
+        color: #ffffff; /* Ensure icons remain visible */
+    }
+
+    /* Styling for the arrow down button */
+    .arrow-down {
+        margin-top: 30px; /* Space above the arrow */
+        width: 50px; /* Circle width */
+        height: 50px; /* Circle height */
+        border-radius: 50%; /* Make it round */
+        border: 2px solid #ffffff; /* White border for contrast */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Adjust the arrow icon inside the button */
+    .arrow-down .icon {
+        font-size: 1.2rem; /* Slightly bigger for visibility */
+        color: #ffffff; /* White arrow color */
+    }
+}

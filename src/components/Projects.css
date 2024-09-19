@@ -1,0 +1,41 @@
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: #f5f5f5; /* Light background for the container */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(3, 1fr); /* Three rows */
+    gap: 10px;
+    width: 90%;
+    height: 100%; /* Ensure it takes up the full height of the container */
+}
+
+.project-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Dark gray background color */
+    overflow: hidden;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    text-decoration: none;
+    height: 100%; /* Full height of the grid cell */
+    width: 100%; /* Full width of the grid cell */
+    border-radius: 8px;
+}
+
+.project-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Preserve original size and aspect ratio */
+    background-color: #333; /* Dark gray background color */
+}
