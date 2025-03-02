@@ -16,7 +16,7 @@ const LandingPage = () => {
       <div className='landing-content'>
         <div className="left-side">
           <h1>HELLO</h1>
-          <p>I’m Soheila Golestani, a Frontend developer based in Somewhere</p>
+          <p>I’m Soheila Golestani, a Frontend developer based in Gothenburg</p>
           <div className="buttons">
             {/* Updated the onClick for About Me button */}
             <button className="btn" onClick={() => scrollToSection('about-me')}>

@@ -22,17 +22,38 @@ const AboutMe = () => {
           <div className="column">
             <h3>Experience</h3>
             <ul className="experience-list">
-              <li>
-                <strong>JENSEN yrkeshögskola</strong>
-                <br /> student - frontend developer
+            <li>
+                <strong>Centiro</strong>
+                <br /> Frontend Developer Trainee (full-time)
               </li>
               <li>
                 <strong>MSGROUP</strong>
-                <br /> junior frontend developer
+                <br /> Junior Frontend Developer (full-time)
               </li>
               <li>
                 <strong>INESC Technology and Science</strong>
-                <br /> researcher
+                <br /> Researcher (full-time)
+              </li>
+              <li>
+              <strong>Golestan Dezful Co.</strong>
+                <br /> Web Developer (full-time)
+              </li>
+            </ul>
+          </div>
+          <div className="column">
+            <h3>Education</h3>
+            <ul className="experience-list">
+            <li>
+                <strong>JENSEN yrkeshögskola</strong>
+                <br />Frontend Development, August 2023 - currently | Sweden 
+              </li>
+              <li>
+                <strong>SFI Gothenburg </strong>
+                <br /> Swedish language, March 2023 - August 2023 | Sweden
+              </li>
+              <li>
+                <strong>Azad University</strong>
+                <br /> B.Eng. Software Engineer, 2009 - 2013 | Iran
               </li>
               <li>
                 Golestan Dezful Co.
@@ -50,6 +71,8 @@ const AboutMe = () => {
           <div className="column">
             <h3>Skills</h3>
             <ul className="skills-list">
+              <li>Angular</li>
+              <li>Azure Devops</li>
               <li>JavaScript</li>
               <li>Bootstrap</li>
               <li>TypeScript</li>

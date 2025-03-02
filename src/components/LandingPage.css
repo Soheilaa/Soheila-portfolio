@@ -210,7 +210,7 @@
 
     /* Full width image on mobile */
     .right-side img {
-        width: 100%; /* Image takes up full width */
+        width: 109%; /* Image takes up full width */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover; /* Ensure the image covers the area well */
         margin-bottom: 20px; /* Space below the image */
@@ -226,52 +226,58 @@
 
     /* Full width buttons with padding for touch interaction */
     .btn {
-        width: 100%; /* Full width for mobile */
-        padding: 14px; /* Increase padding for better touch area */
-        font-size: 1.2rem; /* Increase button text size */
-        border-radius: 5px; /* Slight rounding for better design */
+        width: 95%;
+        padding: 14px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 4rem;
+        position: relative;
     }
 
-    /* Adjust the CV button specifically */
     #right-button {
         width: 100%; /* Full width */
         padding: 16px; /* Increase padding for better touch area */
         background-color: rgba(59, 59, 59, 0.7); /* Slightly transparent background */
-        color: #ffffff; /* Text color */
-        border: none; /* Clean look */
-        font-size: 1.2rem; /* Slightly larger font for visibility */
-        border-radius: 5px; /* Rounded corners */
+        color: #ffffff; 
+        border: none; 
+        font-size: 1.2rem; 
+        border-radius: 5px; 
+        bottom: 8px;
     }
 
-    /* Social icons arranged in a row and spaced evenly */
     .social-icons {
-        margin-top: 20px; /* Space above social icons */
+        margin-top: 20px;
+        z-index: 9999;
         display: flex;
-        justify-content: center; /* Center the icons */
-        gap: 20px; /* Spacing between icons */
+        justify-content: center; 
+        gap: 20px;
+        bottom: 20rem;
     }
 
-    /* Adjust icon sizes for mobile */
     .icon {
-        font-size: 1.6rem; /* Slightly larger icons for touch interaction */
-        color: #ffffff; /* Ensure icons remain visible */
+        font-size: 1.6rem; 
+        color: #181818;
     }
 
-    /* Styling for the arrow down button */
     .arrow-down {
-        margin-top: 30px; /* Space above the arrow */
-        width: 50px; /* Circle width */
-        height: 50px; /* Circle height */
-        border-radius: 50%; /* Make it round */
-        border: 2px solid #ffffff; /* White border for contrast */
+        margin-top: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #181818;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    /* Adjust the arrow icon inside the button */
     .arrow-down .icon {
-        font-size: 1.2rem; /* Slightly bigger for visibility */
-        color: #ffffff; /* White arrow color */
+        font-size: 1.2rem;
+        color: #181818; 
+    }
+    .arrow-down::before {
+        background-color: #181818 !important;
     }
 }
